@@ -1,0 +1,255 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#fff7ed;
+    color:#2b2b2b;
+}
+
+/* NAVBAR */
+header{
+    background:#ffffff;
+    box-shadow:0 4px 15px rgba(255,123,0,0.2);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 50px;
+}
+
+.logo{
+    color:#ff6b00;
+    font-size:28px;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+.nav-links li a{
+    text-decoration:none;
+    color:#333;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.nav-links li a:hover{
+    color:#ff6b00;
+}
+
+.search-box{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.search-box input{
+    padding:9px 15px;
+    border:2px solid #ff6b00;
+    border-radius:20px;
+    outline:none;
+}
+
+.search-box button{
+    padding:9px 18px;
+    border:none;
+    border-radius:20px;
+    background:#ff6b00;
+    color:white;
+    cursor:pointer;
+    box-shadow:0 4px 0 #cc5200;
+    transition:0.2s;
+}
+
+/* HERO */
+.hero{
+    min-height:80vh;
+    background:linear-gradient(135deg,#ff9f1c,#ff6b00,#ffbf69);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-text h2{
+    font-size:60px;
+    letter-spacing:4px;
+    color:white;
+    animation:glow 2s infinite alternate;
+}
+
+.hero-text p{
+    font-size:22px;
+    margin:15px 0 25px;
+    color:#fff8e7;
+}
+
+/* CONTENT */
+.content{
+    padding:70px 8%;
+    text-align:center;
+    background:#fff7ed;
+}
+
+.content h2{
+    color:#ff6b00;
+    font-size:38px;
+    margin-bottom:25px;
+}
+
+.content p{
+    color:#333;
+    font-size:18px;
+    line-height:1.6;
+}
+
+.section-img{
+    width:280px;
+    height:280px;
+    object-fit:cover;
+    border-radius:20px;
+    margin:20px 0;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    padding:12px 30px;
+    background:#ff6b00;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    box-shadow:0 6px 0 #cc5200;
+    transition:0.2s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 9px 0 #cc5200;
+    background:#ff7b00;
+}
+
+.btn:active{
+    transform:translateY(3px);
+    box-shadow:0 3px 0 #cc5200;
+}
+
+/* SHOP */
+.shop{
+    background:#fff0db;
+}
+
+.shop-container{
+    display:flex;
+    gap:30px;
+    margin-top:40px;
+    overflow-x:auto;
+    padding:20px 10px 30px;
+    scroll-behavior:smooth;
+}
+
+.shop-container::-webkit-scrollbar{
+    height:8px;
+}
+
+.shop-container::-webkit-scrollbar-thumb{
+    background:#ff6b00;
+    border-radius:10px;
+}
+
+.shop-container::-webkit-scrollbar-track{
+    background:#ffe0b2;
+    border-radius:10px;
+}
+
+/* PRODUCT CARD */
+.product-card{
+    min-width:230px;
+    flex:0 0 auto;
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.12);
+    transition:0.4s;
+    text-align:center;
+}
+
+.product-card:hover{
+    transform:translateY(-10px) scale(1.03);
+    box-shadow:0 15px 30px rgba(255,107,0,0.3);
+}
+
+.product-card img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:0.4s;
+}
+
+.product-card:hover img{
+    transform:scale(1.05);
+}
+
+.product-card h3{
+    margin:15px 0 8px;
+}
+
+.product-card p{
+    margin-bottom:15px;
+    font-weight:bold;
+    color:#ff6b00;
+}
+
+/* FOOTER */
+footer{
+    background:#ff6b00;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* ANIMATIONS */
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px white;
+    }
+    to{
+        text-shadow:0 0 25px #ffe0b2;
+    }
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    nav{
+        flex-direction:column;
+        gap:15px;
+        padding:15px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero-text h2{
+        font-size:42px;
+    }
+
+    .search-box{
+        width:100%;
+        justify-content:center;
+    }
+}

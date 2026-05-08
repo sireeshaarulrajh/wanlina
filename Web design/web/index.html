@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WANLINA</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <h1 class="logo">WANLINA</h1>
+
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#background">Background</a></li>
+            <li><a href="#shop">Shop</a></li>
+        </ul>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search drinks..." onkeyup="searchProduct()">
+            <button onclick="searchProduct()">Search</button>
+        </div>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-text">
+        <h2>KEDAI AIR WALINA SYAHDUUUUU!!!!</h2>
+        <p>Fresh Drinks, Get Hydrated</p>
+        <a href="#shop" class="btn">Shop Now</a>
+    </div>
+</section>
+
+<section id="about" class="content">
+    <h2>About</h2>
+ <img src="stall.jpeg" alt="About WANLINA" class="section-img">
+
+    <p>WANLINA Mart is a drinks stall that mainly serves UniMAP students with many refreshing drinks at affordable prices.</p>
+</section>
+
+<section id="intro" class="content">
+    <h2>Introduction</h2>
+ <img src="madinah.jpeg" alt="About WANLINA" class="section-img">
+
+    <p>WANLINA Café opened in July 2025 and is managed by Puan Madinah with the help of 5 workers.</p>
+</section>
+
+<section id="background" class="content">
+    <h2>Background</h2>
+    <p>Before this, they only operated as a vendor for 2 years. In 2025, WANLINA Mart decided to collaborate with them.</p>
+</section>
+
+<section id="shop" class="content shop">
+    <h2>Shop</h2>
+    <p>Choose your favourite drinks below</p>
+
+    <div class="shop-container">
+
+        <div class="product-card">
+            <img src="teh ais.jpeg" alt="Teh Ais">
+            <h3>Teh Ais</h3>
+            <p>RM 2.50</p>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+
+        <div class="product-card">
+            <img src="teh o ais.jpeg" alt="Teh O Ais">
+            <h3>Teh O Ais</h3>
+            <p>RM 1.50</p>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+
+        <div class="product-card">
+            <img src="teh limau.jpeg" alt="Teh O Limau">
+            <h3>Teh O Limau</h3>
+            <p>RM 2.00</p>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+
+        <div class="product-card">
+            <img src="nescafe ais.jpeg" alt="Nescafe Ais">
+            <h3>Nescafe Ais</h3>
+            <p>RM 2.50</p>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+
+        <div class="product-card">
+            <img src="kopi.jpeg" alt="Kopi Ais">
+            <h3>Kopi Ais</h3>
+            <p>RM 2.50</p>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+
+        <div class="product-card">
+            <img src="milo.jpeg" alt="Milo Ais">
+            <h3>Milo Ais</h3>
+            <p>RM 3.00</p>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+
+        <div class="product-card">
+            <img src="limau.jpeg" alt="Teh O Limau Ais">
+            <h3>Teh O Limau Ais</h3>
+            <p>RM 2.70</p>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+
+        <div class="product-card">
+            <img src="horlicks.jpeg" alt="Horlicks Ais">
+            <h3>Horlicks Ais</h3>
+            <p>RM 3.50</p>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+
+        <div class="product-card">
+            <img src="bandung.jpeg" alt="Sirap Bandung Ais">
+            <h3>Sirap Bandung Ais</h3>
+            <p>RM 2.50</p>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+
+        <div class="product-card">
+            <img src="campuran.jpeg" alt="Kopi 3 in 1">
+            <h3>Kopi 3 in 1</h3>
+            <p>RM 3.00</p>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+
+    </div>
+
+    <br>
+    <a href="#" class="btn">Order Now</a>
+</section>
+
+<footer>
+    <p>© 2026 WANLINA</p>
+</footer>
+
+<script>
+function searchProduct(){
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let products = document.querySelectorAll(".product-card");
+
+    products.forEach(product => {
+        let name = product.querySelector("h3").textContent.toLowerCase();
+
+        if(name.includes(input)){
+            product.style.display = "block";
+        }else{
+            product.style.display = "none";
+        }
+    });
+}
+</script>
+
+</body>
+</html>
